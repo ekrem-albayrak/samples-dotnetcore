@@ -4,7 +4,7 @@ Includes a sample console application that authenticates itself with a BridgeAPI
 
 ## Usage
 
-Please change the "URL", "USER" and "Password" to your Bridge API instance.
+Please add your URL, user and password to your Bridge API instance to the variables below.
 
 ```csharp
 
