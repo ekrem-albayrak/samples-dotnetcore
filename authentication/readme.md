@@ -8,7 +8,7 @@ Please add your URL, user and password to your Bridge API instance to the variab
 
 ```csharp
 
-urlToApi = ""; // YOUR URL
+urlForTokenGeneration = ""; // YOUR URL
 user = ""; // YOUR USER
 password = ""; // YOUR PASSWORD
 
