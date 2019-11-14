@@ -1,12 +1,13 @@
 # Samples (C# / .Net Core)
 
-Provides samples for using the Bridge API with .Net Core & C#.
+Provides samples for using the FORCAM FORCE Bridge API with .Net Core & C#.
 
 ### Usage / Requirements
 
-##### Access to a FORCAM Force Bridge API System
+###### Access to a FORCAM FORCE Bridge API System
 
 Please add your URL, user and password to your Bridge API instance to the variables below (contained by all samples).
+
 ```csharp
 
 urlForTokenGeneration = ""; // YOUR URL (e.g. https://virtualfactory.force.eco:24443/ffwebservices/)
