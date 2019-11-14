@@ -3,8 +3,11 @@
 Includes helper/base classes with repeating logic.
 
 -> Authentication
+
 -> Get objects 
+
 -> Callbacks
+
 -> ...
 
 ## Usage
