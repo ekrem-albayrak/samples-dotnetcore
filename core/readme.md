@@ -3,7 +3,7 @@
 Includes helper/base classes with repeating logic.
 
 -> Authentication
--> Get objects 
+-> Get specific objects 
 -> Callbacks
 -> ...
 
