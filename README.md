@@ -1,2 +1,2 @@
 # samples-dotnet
-Contains .Net Core examples how to use the FORCE Bridge API.
+Provides examples for using the Bridge API with .Net Core & C#. 
