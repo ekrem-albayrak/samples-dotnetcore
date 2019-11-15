@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace core.objects
+namespace logic
 {
     public class Token
     {

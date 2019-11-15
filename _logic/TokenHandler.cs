@@ -1,5 +1,4 @@
-﻿using core.objects;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -7,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Web;
 
-namespace core.logic
+namespace logic
 {
 
     public class TokenHandler

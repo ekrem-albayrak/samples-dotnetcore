@@ -1,19 +1,18 @@
-﻿using core.objects;
-using FORCAM.BridgeAPI.Model;
+﻿using FORCAM.BridgeAPI.Model;
 using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace core.logic
+namespace logic
 {
-    public class Connector
+    public class FORCEBridgeConnector
     {
 
-        private string _baseURL;
-        private Token _token;
+        private readonly string _baseURL;
+        private readonly Token _token;
 
-        public Connector(string urlBridgeAPI, Token accessToken)
+        public FORCEBridgeConnector(string urlBridgeAPI, Token accessToken)
         {
             _baseURL = urlBridgeAPI;
             _token = accessToken;

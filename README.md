@@ -32,8 +32,15 @@ A small .net core console application wich authenticates to a FORCAM FORCE Bridg
 
 Folder: "authentication".
 
-# Available workplaces
+# Get all available workplaces
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all available workplaces and prints them out.
 
 Folder: "getavailableworkplaces".
+
+# Get current operating state of a workplace
+
+A small .net core cosnsole application wich authenticates to a FORCAM FORCE Bridge API, determine the operating state of an workplace and print it.
+
+Folder: "getoperatingstateofworkplace".
+

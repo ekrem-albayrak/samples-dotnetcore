@@ -1,5 +1,4 @@
-﻿using core.logic;
-using core.objects;
+﻿using logic;
 using System;
 
 namespace authentication
