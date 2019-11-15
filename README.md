@@ -26,6 +26,11 @@ password = ""; // YOUR PASSWORD (e.g. GitHub)
 
 ```
 
+###### Framework & Tools
+
+* Requires .NET Core 2.2
+* Created with Microsoft Visual Studio 2019
+
 ### Description of the sample applications:
 
 # Authentication
