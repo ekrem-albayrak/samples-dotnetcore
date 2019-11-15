@@ -1,18 +1,20 @@
-# Samples (C# / .Net Core)
+# Samples (C# / .NET Core)
 
-Provides samples for using the FORCAM FORCE Bridge API with .Net Core & C#.
+Provides samples for using the FORCAM FORCE Bridge API with .NET Core & C#.
 
 ### Usage / Requirements
 
 ###### Further Bridge API information
 
-Website: https://www.forcebridge.io/
-Documentation: https://docs.forcebridge.io/
-ReDoc documentation: https://docs.forcebridge.io/api/
-Swagger documentation: https://forcebridgepublish.force.eco:24443/ffwebservices/swagger/index.html
-Virtual Factory: https://edu.forcebridge.io/
+* Website: https://www.forcebridge.io/
+* Documentation: https://docs.forcebridge.io/
+* ReDoc documentation: https://docs.forcebridge.io/api/
+* Swagger documentation: https://forcebridgepublish.force.eco:24443/ffwebservices/swagger/index.html
+* Virtual Factory: https://edu.forcebridge.io/
 
 ###### Access to a FORCAM FORCE Bridge API System
+
+_If you need access to a demo system please contact forcebridge@forcam.com._
 
 Please add your URL, user and password of your Bridge API instance to the variables below (contained by all samples).
 
