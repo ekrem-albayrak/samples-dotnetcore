@@ -11,6 +11,7 @@ Provides samples for using the FORCAM FORCE Bridge API with .NET Core & C#.
 * ReDoc documentation: https://docs.forcebridge.io/api/
 * Swagger documentation: https://forcebridgepublish.force.eco:24443/ffwebservices/swagger/index.html
 * Virtual Factory: https://edu.forcebridge.io/
+* Company: https://www.forcam.com/
 
 ###### Access to a FORCAM FORCE Bridge API System
 
