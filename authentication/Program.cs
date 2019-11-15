@@ -6,7 +6,7 @@ namespace authentication
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Welcome to the authentication sample!" + Environment.NewLine);
 

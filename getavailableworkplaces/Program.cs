@@ -6,7 +6,7 @@ namespace getavailableworkplaces
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Welcome to the get all available workplaces sample!" + Environment.NewLine);
 

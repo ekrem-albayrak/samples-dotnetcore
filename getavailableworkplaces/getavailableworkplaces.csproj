@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\logic\logic.csproj" />
+    <ProjectReference Include="..\_logic\logic.csproj" />
   </ItemGroup>
 
 </Project>
