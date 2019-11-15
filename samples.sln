@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "authentication", "authentication\authentication.csproj", "{F7E55CC0-F344-4479-B224-B8CFF96BF972}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core", "core\core.csproj", "{AA3A9DB8-6BD0-47A7-8E53-D53BA6BDA79A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "logic", "logic\logic.csproj", "{AA3A9DB8-6BD0-47A7-8E53-D53BA6BDA79A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6892107-FDA4-4644-AC18-B9D34FD2B8F5}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getavailableworkplaces", "getavailableworkplaces\getavailableworkplaces.csproj", "{FC426FFA-EF30-4255-91FF-DD9514C6456B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "model", "model\model.csproj", "{B4DDDAF6-4F7E-496E-B12A-709C2183B6CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{AA3A9DB8-6BD0-47A7-8E53-D53BA6BDA79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA3A9DB8-6BD0-47A7-8E53-D53BA6BDA79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA3A9DB8-6BD0-47A7-8E53-D53BA6BDA79A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC426FFA-EF30-4255-91FF-DD9514C6456B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC426FFA-EF30-4255-91FF-DD9514C6456B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC426FFA-EF30-4255-91FF-DD9514C6456B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC426FFA-EF30-4255-91FF-DD9514C6456B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4DDDAF6-4F7E-496E-B12A-709C2183B6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4DDDAF6-4F7E-496E-B12A-709C2183B6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4DDDAF6-4F7E-496E-B12A-709C2183B6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4DDDAF6-4F7E-496E-B12A-709C2183B6CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
