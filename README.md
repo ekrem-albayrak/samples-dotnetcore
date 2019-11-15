@@ -37,24 +37,49 @@ password = ""; // YOUR PASSWORD (e.g. GitHub)
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API and prints out the token information.
 
-Folder: "authentication".
+Folder: "Authentication".
 
 # Get all available workplaces
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all available workplaces and prints them out.
 
-Folder: "getavailableworkplaces".
+Folder: "GetAvailableWorkplaces".
 
 # Get current operating state of a workplace
 
 A small .net core cosnsole application wich authenticates to a FORCAM FORCE Bridge API, determine the operating state of an workplace and print it.
 
-Folder: "getoperatingstateofworkplace".
+Folder: "GetOperatingStateOfWorkplace".
 
 # Get all operating states
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all operating states and prints them out.
 
-Folder: "getoperatingstates".
+Folder: "GetOperatingStates".
+
+# Alerting on workplace operating state change (cyclic)
+
+A easy .net core console application which "alerts" if state of given workplace changed to undefined stoppage (Code 999).
+
+Functionality:
+
+1.) Reads first console argument (Cycle-Time) / Default 60 seconds
+2.) LOOP (Cycle Time)
+2.1) Detect current operating state of the workplace
+2.2) If OperatingState is "999" (Undefined Stoppage)
+2.2.1) Create a console message
+
+_This procedure is not the "best" way to create a alarming/alerting functionality._
+_It is better to use the Bridge API callback functionality (PUSH not PULL)._
+_See the following callback examples_
+
+Folder: "AlertingOnWorkplaceOperationStateChangeCyclic"
+
+# Alerting on workplace operating state change (callback)
+
+To be defined / In progress
+
+Folder: "AlertingOnWorkplaceOperationStateChangeCallback"
+
 
 

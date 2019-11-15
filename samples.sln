@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "authentication", "authentication\authentication.csproj", "{F7E55CC0-F344-4479-B224-B8CFF96BF972}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication", "authentication\Authentication.csproj", "{F7E55CC0-F344-4479-B224-B8CFF96BF972}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "logic", "_logic\logic.csproj", "{AA3A9DB8-6BD0-47A7-8E53-D53BA6BDA79A}"
 EndProject
@@ -15,13 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "getavailableworkplaces", "getavailableworkplaces\getavailableworkplaces.csproj", "{FC426FFA-EF30-4255-91FF-DD9514C6456B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetAvailableWorkplaces", "getavailableworkplaces\GetAvailableWorkplaces.csproj", "{FC426FFA-EF30-4255-91FF-DD9514C6456B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "model", "_model\model.csproj", "{B4DDDAF6-4F7E-496E-B12A-709C2183B6CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getoperatingstateofworkplace", "getoperatingstateofworkplace\getoperatingstateofworkplace.csproj", "{22FCC163-0C81-4BB8-A4F1-EFDF75AF8F04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetOperatingStateOfWorkplace", "getoperatingstateofworkplace\GetOperatingStateOfWorkplace.csproj", "{22FCC163-0C81-4BB8-A4F1-EFDF75AF8F04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getoperatingstates", "getoperatingstates\getoperatingstates.csproj", "{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetOperatingStates", "getoperatingstates\GetOperatingStates.csproj", "{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlertingOnWorkplaceOperationStateChangeCyclic", "AlertingOnWorkplaceOperationStateChangeCyclic\AlertingOnWorkplaceOperationStateChangeCyclic.csproj", "{61BEF072-0E04-4C8E-95AF-B5DE5781F04E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlertingOnWorkplaceOperationStateChangeCallback", "AlertingOnWorkplaceOperationStateChangeCallback\AlertingOnWorkplaceOperationStateChangeCallback.csproj", "{B038336A-43A8-4753-A1B7-81598F56CCF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,14 @@ Global
 		{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61BEF072-0E04-4C8E-95AF-B5DE5781F04E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61BEF072-0E04-4C8E-95AF-B5DE5781F04E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61BEF072-0E04-4C8E-95AF-B5DE5781F04E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61BEF072-0E04-4C8E-95AF-B5DE5781F04E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B038336A-43A8-4753-A1B7-81598F56CCF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B038336A-43A8-4753-A1B7-81598F56CCF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B038336A-43A8-4753-A1B7-81598F56CCF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B038336A-43A8-4753-A1B7-81598F56CCF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
