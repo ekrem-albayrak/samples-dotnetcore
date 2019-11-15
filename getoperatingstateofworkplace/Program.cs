@@ -21,15 +21,14 @@ namespace getoperatingstateofworkplace
             TokenHandler tokenHandler = new TokenHandler(user, password, urlForTokenGeneration);
             Token token = tokenHandler.GetAccessToken();
 
-            Console.WriteLine("Token: " + token.access_token + Environment.NewLine);
-
-            FORCEBridgeConnector connector = new FORCEBridgeConnector(urlToBridgeAPI, token);
+            Console.WriteLine("Token: " + token.Access_token + Environment.NewLine);
 
             Console.WriteLine("Determine workplace " + workplaceNumber + "..." + Environment.NewLine);
 
+            FORCEBridgeConnector connector = new FORCEBridgeConnector(urlToBridgeAPI, token);
             var workplace = connector.GetWorkplaceByNumber(workplaceNumber);
 
-            Console.WriteLine(String.Format("Workplace: {1} ({2})", workplace.Id, workplace.Number, workplace.Description));
+            Console.WriteLine(String.Format("Workplace: {0} ({1})", workplace.Number, workplace.Description));
             Console.WriteLine(String.Format("State: {2}: {1} (Id: {0})", workplace.OperatingState.Id, workplace.OperatingState.Description, workplace.OperatingState.Code));
         }
     }

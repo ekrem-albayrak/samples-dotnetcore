@@ -16,9 +16,9 @@ namespace FORCAM.BridgeAPI.Model {
     /// The operating states
     /// </summary>
     /// <value>The operating states</value>
-    [DataMember(Name="statusDefinitions", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "statusDefinitions")]
-    public List<OperatingState> StatusDefinitions { get; set; }
+    [DataMember(Name= "operatingStates", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "operatingStates")]
+    public List<OperatingState> OperatingStates { get; set; }
 
 
     /// <summary>
@@ -28,7 +28,7 @@ namespace FORCAM.BridgeAPI.Model {
     public override string ToString()  {
       var sb = new StringBuilder();
       sb.Append("class EmbeddedOperatingStates {\n");
-      sb.Append("  StatusDefinitions: ").Append(StatusDefinitions).Append("\n");
+      sb.Append("  StatusDefinitions: ").Append(OperatingStates).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

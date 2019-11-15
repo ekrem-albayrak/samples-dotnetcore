@@ -21,10 +21,10 @@ namespace authentication
 
             Console.WriteLine("Result:");
             Console.WriteLine("-----------------");
-            Console.WriteLine("Token: " + token.access_token);
-            Console.WriteLine("Token type: " + token.token_type);
-            Console.WriteLine("Expires in: " + token.expires_in);
-            Console.WriteLine("Scope: " + token.scope);
+            Console.WriteLine("Token: " + token.Access_token);
+            Console.WriteLine("Token type: " + token.Token_type);
+            Console.WriteLine("Expires in: " + token.Expires_in);
+            Console.WriteLine("Scope: " + token.Scope);
 
 
         }

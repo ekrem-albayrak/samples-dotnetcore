@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "model", "_model\model.cspro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getoperatingstateofworkplace", "getoperatingstateofworkplace\getoperatingstateofworkplace.csproj", "{22FCC163-0C81-4BB8-A4F1-EFDF75AF8F04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getoperatingstates", "getoperatingstates\getoperatingstates.csproj", "{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{22FCC163-0C81-4BB8-A4F1-EFDF75AF8F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22FCC163-0C81-4BB8-A4F1-EFDF75AF8F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22FCC163-0C81-4BB8-A4F1-EFDF75AF8F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1490B2-31AE-4AAC-8DD0-2F048D594A91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

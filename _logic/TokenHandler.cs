@@ -1,9 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Web;
 
 namespace logic
@@ -51,7 +49,12 @@ namespace logic
             requestToken.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded") { CharSet = "UTF-8" };
             requestToken.Headers.TryAddWithoutValidation("Authorization", String.Format("Basic {0}", encodedPair));
 
-            var bearerResult = new HttpClient().SendAsync(requestToken).Result;
+            HttpResponseMessage bearerResult;
+            using (var client = new HttpClient())
+            {
+                bearerResult = client.SendAsync(requestToken).Result;
+            }
+                        
             var bearerData = bearerResult.Content.ReadAsStringAsync().Result;
             return JObject.Parse(bearerData).ToObject<Token>();
         }

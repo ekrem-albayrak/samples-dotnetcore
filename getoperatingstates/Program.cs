@@ -1,13 +1,14 @@
 ﻿using logic;
 using System;
+using System.Drawing;
 
-namespace getavailableworkplaces
+namespace getoperatingstates
 {
     class Program
     {
         static void Main()
         {
-            Console.WriteLine("Welcome to the get all available workplaces sample!" + Environment.NewLine);
+            Console.WriteLine("Welcome to the get all operating states example!" + Environment.NewLine);
 
             string urlForTokenGeneration = "https://virtualfactory.force.eco:24443/ffwebservices/"; // Url to Bridge API
             string urlToBridgeAPI = urlForTokenGeneration + "api/v2/";
@@ -21,16 +22,18 @@ namespace getavailableworkplaces
 
             Console.WriteLine("Token: " + token.Access_token + Environment.NewLine);
 
-            Console.WriteLine("Determine workplaces ..." + Environment.NewLine);
+            Console.WriteLine("Determine operating states ..." + Environment.NewLine);
 
             FORCEBridgeConnector connector = new FORCEBridgeConnector(urlToBridgeAPI, token);
-            var workplaces = connector.GetWorkplaces();
+            var operatingStates = connector.GetOperatingStates();
 
-            foreach (var workplace in workplaces)
+            foreach (var state in operatingStates)
             {
-                Console.WriteLine(String.Format("Id: {0}, Number: {1}, Description: {2}", workplace.Id, workplace.Number, workplace.Description));
+                Console.WriteLine(String.Format("Operating state: {0}: {1} ({2}) with color {3}", state.Code, state.ShortDescription, state.Description, state.Color));
+                Console.BackgroundColor = ConsoleColor.Black;
             }
 
         }
+
     }
 }

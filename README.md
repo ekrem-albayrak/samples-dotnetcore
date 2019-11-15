@@ -51,3 +51,10 @@ A small .net core cosnsole application wich authenticates to a FORCAM FORCE Brid
 
 Folder: "getoperatingstateofworkplace".
 
+# Get all operating states
+
+A small .net core cosnsole application wich authenticates to a FORCAM FORCE Bridge API, determine all operating states and prints them out.
+
+Folder: "getoperatingstates".
+
+
