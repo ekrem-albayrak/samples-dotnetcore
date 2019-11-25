@@ -27,6 +27,7 @@ namespace AlertingOnWorkplaceOperationStateChangeCyclic
             Console.WriteLine("Cycle time is " + (cycleTime / 1000) + " seconds!" + Environment.NewLine);
 
             Console.WriteLine("Start: " + Environment.NewLine);
+            
             using Timer t = new Timer(TimerCallback, null, 0, cycleTime);
             {
                 // Wait for the user to hit <Enter>
