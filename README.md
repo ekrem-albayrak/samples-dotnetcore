@@ -78,9 +78,12 @@ Folder: "AlertingOnWPLOperatingStateChangesBasedOnCyclicRequests"
 
 # Alerting on workplace operating state change (based on mqtt callbacks)
 
-A .net core console application wich listen to machine state changes event over an MQTT Broker and prints out a alarting message if a specific workplace operating state occures.
+A .net core console application wich register and subscribe to machine state changes over our Callback-Functionality with an MQTT Broker and prints out a alarting message if a specific workplace operating state occures.
 
-Attention: Requires a MQTT-Broker (TCP)
+Attention: 
+
+Requires a MQTT-Broker 
+(For tests you can use test mqtt-brokers like "test.mosquitto.org").
 
 ```csharp
 
