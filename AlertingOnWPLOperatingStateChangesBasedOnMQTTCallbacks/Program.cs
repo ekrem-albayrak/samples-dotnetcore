@@ -30,7 +30,7 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
             Token token = tokenHandler.GetAccessToken();
             FORCEBridgeConnector connector = new FORCEBridgeConnector(_urlToBridgeAPI, token);
 
-            Console.WriteLine("Connect to the BridgeAPI and get machineID of defined workplace " + _workplaceNumber);
+            Console.WriteLine("Connect to the Bridge API and get machineID of defined workplace " + _workplaceNumber);
             Console.WriteLine("");
 
             string machineID = connector.GetMachineOfWorkplaceByNumber(_workplaceNumber).Id;
