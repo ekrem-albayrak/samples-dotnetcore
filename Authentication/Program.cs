@@ -5,18 +5,17 @@ namespace authentication
 {
     class Program
     {
+
+        private const string _urlForTokenGeneration = "https://virtualfactory.force.eco:24443/ffwebservices/"; // URL to Bridge API
+        private const string _user = "GitHub"; // User
+        private const string _password = "GitHub"; // Password of the user
+
         static void Main()
         {
-            Console.WriteLine("Welcome to the authentication sample!" + Environment.NewLine);
-
-
-            string urlForTokenGeneration = "https://virtualfactory.force.eco:24443/ffwebservices/"; // Url to Bridge API
-            string user = "GitHub"; // User
-            string password = "GitHub"; // Password of the user
 
             Console.WriteLine("Determine token ..." + Environment.NewLine);
 
-            TokenHandler tokenHandler = new TokenHandler(user, password, urlForTokenGeneration);
+            TokenHandler tokenHandler = new TokenHandler(_user, _password, _urlForTokenGeneration);
             Token token = tokenHandler.GetAccessToken();
 
             Console.WriteLine("Result:");
