@@ -12,6 +12,8 @@ namespace authentication
 
         static void Main()
         {
+            Console.WriteLine("Welcome to the authentication sample!");           
+            Console.WriteLine("");
 
             Console.WriteLine("Determine token ..." + Environment.NewLine);
 

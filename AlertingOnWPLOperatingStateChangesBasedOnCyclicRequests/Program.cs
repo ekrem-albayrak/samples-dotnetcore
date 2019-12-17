@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 
-namespace AlertingOnWorkplaceOperationStateChangeCyclic
+namespace AlertingOnWorkplaceOperatingStateChangeBasedOnCyclicRequests
 {
     class Program
     {
@@ -17,7 +17,8 @@ namespace AlertingOnWorkplaceOperationStateChangeCyclic
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Welcome to the alerting example (cyclic)!" + Environment.NewLine);
+            Console.WriteLine("Welcome to the alerting example (based on cyclic requests)!");
+            Console.WriteLine("");
 
             int cycleTime = 60000; // 60 seconds
             if (args != null && args.Length > 0)
@@ -27,8 +28,8 @@ namespace AlertingOnWorkplaceOperationStateChangeCyclic
             Console.WriteLine("Cycle time is " + (cycleTime / 1000) + " seconds!" + Environment.NewLine);
 
             Console.WriteLine("Start: " + Environment.NewLine);
-            
-            using Timer t = new Timer(TimerCallback, null, 0, cycleTime);
+
+            using (Timer t = new Timer(TimerCallback, null, 0, cycleTime))
             {
                 // Wait for the user to hit <Enter>
                 Console.ReadLine();
@@ -51,7 +52,7 @@ namespace AlertingOnWorkplaceOperationStateChangeCyclic
                 // WARNING MESSAGE
                 Console.WriteLine(String.Format("WARNING: Operating state {0} (Undefined Stoppage) occured on workplace {1}", _operating_state_code_for_alarming, _workplaceNumber));
             }
-            else 
+            else
             {
                 // Nothing to do
                 Console.WriteLine("Everything is okay ...");
@@ -60,7 +61,7 @@ namespace AlertingOnWorkplaceOperationStateChangeCyclic
             Console.WriteLine(String.Empty); // new line
         }
 
-   
+
 
         private static bool IsWorkplaceInState(string workplaceNumber, string operatingStateCode)
         {
