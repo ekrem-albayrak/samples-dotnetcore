@@ -21,9 +21,9 @@ Please add your URL, user and password of your Bridge API instance to the variab
 
 ```csharp
 
-urlForTokenGeneration = ""; // YOUR URL (e.g. https://virtualfactory.force.eco:24443/ffwebservices/)
-user = ""; // YOUR USER (e.g. GitHub)
-password = ""; // YOUR PASSWORD (e.g. GitHub)
+private const string _urlForTokenGeneration = ""; // YOUR URL (e.g. https://virtualfactory.force.eco:24443/ffwebservices/)
+private const string _user; // YOUR USER (e.g. GitHub)
+private const string _password; // YOUR PASSWORD (e.g. GitHub)
 
 ```
 
