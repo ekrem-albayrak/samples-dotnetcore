@@ -1,6 +1,7 @@
 # Samples (C# / .NET Core)
 
 Provides samples for using the FORCAM FORCE Bridge API with .NET Core & C#.
+If you have any questions look at https://ask.forcebridge.io/
 
 ### Usage / Requirements
 
