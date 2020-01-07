@@ -45,6 +45,8 @@ Folder: "Authentication".
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all available workplaces and prints them out.
 
+![Image](../master/image_getavailableworkplaces.JPG)
+
 Folder: "GetAvailableWorkplaces".
 
 # Get current operating state of a workplace
@@ -93,11 +95,14 @@ string PORT = "1883";
 string MQTTTopicName = "external/statechange"; // "external/" is mandatory
 
 ```
+![Image](../master/image_alertingonwploperatingstatechangesbasedonmqtt.JPG)
 
 Folder: "AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacks"
 
-# Web App Examples
+# Web App Example
 
 A easy .NET Core Blazor Web App (ASP.NET) which includes some samples like "show all workplaces".
+
+![Image](../master/image_webapp.JPG)
 
 Folder: "WebApp"
