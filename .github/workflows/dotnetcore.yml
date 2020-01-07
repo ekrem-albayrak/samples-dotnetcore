@@ -1,4 +1,4 @@
-name: .NET Core
+name: Automatic build (.Net Core 3.0)
 
 on: [push]
 
