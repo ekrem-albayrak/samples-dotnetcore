@@ -27,7 +27,7 @@ namespace getoperatingstateofworkplace
             Console.WriteLine("Determine workplace " + workplaceNumber + "..." + Environment.NewLine);
 
             FORCEBridgeConnector connector = new FORCEBridgeConnector(_urlToBridgeAPI, token);
-            var workplace = connector.GetWorkplaceByNumber(workplaceNumber);
+            var workplace = connector.GetCurrentWorkplaceOperatingStateByWorkplaceNumber(workplaceNumber);
 
             Console.WriteLine(String.Format("Workplace: {0} ({1})", workplace.Number, workplace.Description));
             Console.WriteLine(String.Format("State: {2}: {1} (Id: {0})", workplace.OperatingState.Id, workplace.OperatingState.Description, workplace.OperatingState.Code));

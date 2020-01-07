@@ -89,7 +89,7 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
                     Console.WriteLine("MachineId: " + callbackResponse.Properties.ObjectId);
                     Console.WriteLine("Time stamp: " + callbackResponse.Properties.Timestamp);
                     //There was a state change, now check if the current state is the wished "alarming"-statem if yes print out a "WARNING"
-                    var workplace = connector.GetWorkplaceByNumber(_workplaceNumber);
+                    var workplace = connector.GetCurrentWorkplaceOperatingStateByWorkplaceNumber(_workplaceNumber);
                     if (workplace.OperatingState.Code == _operating_state_code_for_alarming)
                     {
                         Console.WriteLine("---------------------------------------");

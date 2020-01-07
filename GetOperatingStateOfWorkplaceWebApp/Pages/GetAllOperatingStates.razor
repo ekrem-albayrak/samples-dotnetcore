@@ -1,0 +1,56 @@
+﻿@page "/GetAllOperatingStates"
+
+@using WebApp.Data
+@inject BridgeAPIConnectorService ConnectorService
+
+<h1>Operating states</h1>
+
+@if (OperatingStates == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Short Description</th>
+                <th>Description</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var state in OperatingStates)
+            {
+            <tr bgcolor="@state.Color">
+                <td>@state.Code</td>
+                <td>@state.ShortDescription</td>
+                <td>@state.Description</td>
+                <td>@state.Color</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions{
+
+    private List<OperatingState> _operatingStates;
+    List<OperatingState> OperatingStates
+    {
+        get { if (_operatingStates == null) LoadData(); return _operatingStates; }
+        set { _operatingStates = value; }
+    }
+
+    void LoadData()
+    {
+        Task.FromResult(LoadDataTask());
+    }
+
+    private async Task LoadDataTask()
+    {
+        OperatingStates = await ConnectorService.GetAllOperatingStates();
+    }
+
+}

@@ -37,13 +37,22 @@ namespace logic
         }
 
 
-        public WorkplaceProperties GetWorkplaceByNumber(string workplaceNumber)
+        public WorkplaceProperties GetCurrentWorkplaceOperatingStateByWorkplaceNumber(string workplaceNumber)
         {
             var httpClient = new RestClient(_baseURL);
             RestRequest request = new RestRequest("workplaces?workplaceNumber=" + workplaceNumber, Method.GET, DataFormat.Json);
             SetTokenHeader(request);
             var response = httpClient.Execute<WorkplaceCollection>(request, Method.GET);
-            return response.Data.Embedded.Workplaces.First().Properties;
+            var workplaceProperties = response.Data.Embedded.Workplaces.First().Properties;
+
+            request = new RestRequest("workplaces/" + workplaceProperties.Id + "/recordedOperatingStates?limit=1", Method.GET, DataFormat.Json);
+            SetTokenHeader(request);
+            var states = httpClient.Execute<RecordedOperatingStateCollection>(request, Method.GET).Data.Properties.Elements.First();
+
+            //overwrite general operating state with current operating state detail
+            workplaceProperties.OperatingState = states.OperatingState;
+                      
+            return workplaceProperties;
         }
 
         public MachineProperties GetMachineOfWorkplaceByNumber(string workplaceNumber)

@@ -95,3 +95,9 @@ string MQTTTopicName = "external/statechange"; // "external/" is mandatory
 ```
 
 Folder: "AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacks"
+
+# Web App Examples
+
+A easy .NET Core Blazor Web App (ASP.NET) which includes some samples like "show all workplaces".
+
+Folder: "WebApp"

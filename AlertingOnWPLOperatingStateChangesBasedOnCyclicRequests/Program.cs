@@ -68,7 +68,7 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnCyclicRequests
             TokenHandler tokenHandler = new TokenHandler(_user, _password, _urlForTokenGeneration);
             Token token = tokenHandler.GetAccessToken();
             FORCEBridgeConnector connector = new FORCEBridgeConnector(_urlToBridgeAPI, token);
-            var workplace = connector.GetWorkplaceByNumber(workplaceNumber);
+            var workplace = connector.GetCurrentWorkplaceOperatingStateByWorkplaceNumber(workplaceNumber);
             return (workplace.OperatingState.Code == operatingStateCode);
         }
 

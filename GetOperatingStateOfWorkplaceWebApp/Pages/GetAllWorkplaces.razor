@@ -1,0 +1,108 @@
+﻿@page "/GetAllWorkplaces"
+
+@using WebApp.Data
+@inject BridgeAPIConnectorService ConnectorService
+
+<h1>Workplaces</h1>
+
+@if (Workplaces == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Description</th>
+                <th>...</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var workplace in Workplaces)
+            {
+                <tr>
+                    <td>@workplace.Number</td>
+                    <td>@workplace.Description</td>
+                    <td><button class="btn btn-default" @onclick="@(() => ShowDetails(workplace))">More details</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    if (isDetail)
+    {
+        <div class="modal" tabindex="-1" style="display:block" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Details</h3>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <tr>
+                                <td>Number</td>
+                                <td>@currentWorkplace.Number</td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td>@currentWorkplace.Description</td>
+                            </tr>
+                            <tr>
+                                <td>Operating state</td>
+                                <td>@currentWorkplaceOperatingState</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-warning" @onclick="CloseModal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+}
+
+@functions{
+
+    private List<Workplace> _workplaces;
+    List<Workplace> Workplaces
+    {
+        get { if (_workplaces == null) LoadData(); return _workplaces; }
+        set { _workplaces = value; }
+    }
+
+    Boolean isDetail = false;
+    Workplace currentWorkplace;
+    string currentWorkplaceOperatingState;
+
+    async Task ShowDetails(Workplace workplace)
+    {
+        isDetail = true;
+        currentWorkplaceOperatingState = await ConnectorService.GetCurrentOperatingStateOfWorkplace(workplace.Number);
+        currentWorkplace = workplace;
+    }
+
+    protected void CloseModal()
+    {
+        isDetail = false;
+    }
+
+    void LoadData()
+    {
+        Task.FromResult(LoadDataTask());
+    }
+
+    private async Task LoadDataTask()
+    {
+        Workplaces = await ConnectorService.GetAllWorkplaces();
+    }
+
+}
+
+
+
