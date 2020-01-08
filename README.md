@@ -7,12 +7,10 @@ If you have any questions look at https://ask.forcebridge.io/
 
 ###### Further Bridge API information
 
-* Website: https://www.forcebridge.io/
+* Website: https://www.forcebridge.io/ | https://www.forcam.com/
 * Documentation: https://docs.forcebridge.io/
 * ReDoc documentation: https://docs.forcebridge.io/api/
 * Swagger documentation: https://forcebridgepublish.force.eco:24443/ffwebservices/swagger/index.html
-* Virtual Factory: https://edu.forcebridge.io/
-* Company: https://www.forcam.com/
 
 ###### Access to a FORCAM FORCE Bridge API System
 
