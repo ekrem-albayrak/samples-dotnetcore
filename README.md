@@ -33,7 +33,7 @@ private const string _password; // YOUR PASSWORD (e.g. GitHub)
 ###### Framework & Tools
 
 * .NET Core 3.0 runtime (https://dotnet.microsoft.com/download/dotnet-core/3.0)
-* Created with Microsoft Visual Studio 2019 (https://visualstudio.microsoft.com/de/vs/)
+* Microsoft Visual Studio 2019 (https://visualstudio.microsoft.com/de/vs/)
 
 ### Description of the sample applications:
 
