@@ -1,20 +1,20 @@
-# Samples (C# / .NET Core)
+# Sample Applications (C# / .NET Core)
 
-Provides samples for using the FORCAM FORCE Bridge API with .NET Core & C#.
+Provides sample applications for using the FORCAM FORCE Bridge API with .NET Core & C#.
 If you have any questions look at https://ask.forcebridge.io/
 
 Preview:
 
 ![Image](../master/WebAppSmallGif.gif)
 
-### Usage / Requirements
-
-###### Further Bridge API information
+### Useful Links
 
 * Website: https://www.forcebridge.io/ | https://www.forcam.com/
 * Documentation: https://docs.forcebridge.io/
 * ReDoc documentation: https://docs.forcebridge.io/api/
 * Swagger documentation: https://forcebridgepublish.force.eco:24443/ffwebservices/swagger/index.html
+
+### Usage / Requirements
 
 ###### Access to a FORCAM FORCE Bridge API System
 
