@@ -3,7 +3,7 @@
 Provides sample applications for using the FORCAM FORCE Bridge API with .NET Core & C#.
 If you have any questions look at https://ask.forcebridge.io/
 
-Preview:
+Preview of one of the apps:
 
 ![Image](../master/WebAppSmallGif.gif)
 
