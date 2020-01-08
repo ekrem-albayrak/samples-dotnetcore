@@ -3,6 +3,10 @@
 Provides samples for using the FORCAM FORCE Bridge API with .NET Core & C#.
 If you have any questions look at https://ask.forcebridge.io/
 
+Preview:
+
+![Image](../master/WebAppGif.gif)
+
 ### Usage / Requirements
 
 ###### Further Bridge API information
@@ -37,13 +41,15 @@ private const string _password; // YOUR PASSWORD (e.g. GitHub)
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API and prints out the token information.
 
+![Image](../master/AuthenticationImage.JPG)
+
 Folder: "Authentication".
 
 # Get all available workplaces
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all available workplaces and prints them out.
 
-![Image](../master/image_getavailableworkplaces.JPG)
+![Image](../master/GetAvailableWorkplacesGif.gif)
 
 Folder: "GetAvailableWorkplaces".
 
@@ -51,11 +57,15 @@ Folder: "GetAvailableWorkplaces".
 
 A small .net core cosnsole application wich authenticates to a FORCAM FORCE Bridge API, determine the operating state of an workplace and print it.
 
+![Image](../master/GetOperatingStateOfWorkplaceGif.gif)
+
 Folder: "GetOperatingStateOfWorkplace".
 
 # Get all operating states
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all operating states and prints them out.
+
+![Image](../master/GetOperatingStatesGif.gif)
 
 Folder: "GetOperatingStates".
 
@@ -75,6 +85,8 @@ _This procedure is not the "best" way to create a alarming/alerting functionalit
 _It is better to use the Bridge API callback functionality (PUSH not PULL)._
 _See the following callback examples_
 
+![Image](../master/AlertingOnWPLOperatingStateChangesBasedOnCyclicRequestsGif.gif)
+
 Folder: "AlertingOnWPLOperatingStateChangesBasedOnCyclicRequests"
 
 # Alerting on workplace operating state change (based on mqtt callbacks)
@@ -93,7 +105,7 @@ string PORT = "1883";
 string MQTTTopicName = "external/statechange"; // "external/" is mandatory
 
 ```
-![Image](../master/image_alertingonwploperatingstatechangesbasedonmqtt.JPG)
+![Image](../master/AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacksGif.gif)
 
 Folder: "AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacks"
 
@@ -101,6 +113,6 @@ Folder: "AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacks"
 
 A easy .NET Core Blazor Web App (ASP.NET) which includes some samples like "show all workplaces".
 
-![Image](../master/image_webapp.JPG)
+![Image](../master/WebAppGif.gif)
 
 Folder: "WebApp"

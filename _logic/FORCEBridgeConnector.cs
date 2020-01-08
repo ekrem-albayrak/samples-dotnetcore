@@ -35,8 +35,7 @@ namespace logic
             var response = httpClient.Execute<WorkplaceCollection>(request, Method.GET);
             return response.Data.Embedded.Workplaces.Select(x => x.Properties).ToList();
         }
-
-
+        
         public WorkplaceProperties GetCurrentWorkplaceOperatingStateByWorkplaceNumber(string workplaceNumber)
         {
             var httpClient = new RestClient(_baseURL);
