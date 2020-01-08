@@ -5,7 +5,7 @@ If you have any questions look at https://ask.forcebridge.io/
 
 Preview:
 
-![Image](../master/WebAppGif.gif)
+![Image](../master/WebAppGif.gif){:height="150px"}
 
 ### Usage / Requirements
 
