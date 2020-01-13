@@ -95,8 +95,8 @@ A .net core console application wich register and subscribe to machine state cha
 
 Attention: 
 
-Requires a MQTT-Broker 
-(For tests you can use test mqtt-brokers https://github.com/mqtt/mqtt.github.io/wiki/public_brokers).
+Requires an MQTT broker 
+(For testing you can use public mqtt-brokers https://github.com/mqtt/mqtt.github.io/wiki/public_brokers).
 
 ```csharp
 
