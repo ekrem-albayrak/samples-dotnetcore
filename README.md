@@ -12,8 +12,7 @@ Preview of one of the apps:
 
 * Website: https://www.forcebridge.io/ | https://www.forcam.com/
 * Documentation: https://docs.forcebridge.io/
-* ReDoc documentation: https://docs.forcebridge.io/api/
-* Swagger documentation: https://forcebridgepublish.force.eco:24443/ffwebservices/swagger/index.html
+* API Definition: https://app.swaggerhub.com/apis-docs/FORCAM/FORCEBridgeAPI/
 
 ### Usage / Requirements
 
