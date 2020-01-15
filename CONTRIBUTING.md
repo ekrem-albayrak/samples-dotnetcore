@@ -2,6 +2,8 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
+How to? https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
+
 We are always happy if you want to translate these sample applications into other programming languages. 
 We are also happy about new sample applications or the correction of errors.
 
