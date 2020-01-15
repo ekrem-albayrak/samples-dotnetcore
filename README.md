@@ -5,7 +5,8 @@ If you have any questions look at https://ask.forcebridge.io/
 
 Preview of one of the apps:
 
-![Image](../master/WebAppSmallGif.gif)
+
+![Image](Assets/WebAppSmallGif.gif)
 
 ### Useful Links
 
@@ -41,7 +42,7 @@ private const string _password; // YOUR PASSWORD (e.g. GitHub)
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API and prints out the token information.
 
-![Image](../master/AuthenticationImage.JPG)
+![Image](Assets/AuthenticationImage.JPG)
 
 Folder: "Authentication".
 
@@ -49,7 +50,7 @@ Folder: "Authentication".
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all available workplaces and prints them out.
 
-![Image](../master/GetAvailableWorkplacesGif.gif)
+![Image](Assets/GetAvailableWorkplacesGif.gif)
 
 Folder: "GetAvailableWorkplaces".
 
@@ -57,7 +58,7 @@ Folder: "GetAvailableWorkplaces".
 
 A small .net core cosnsole application wich authenticates to a FORCAM FORCE Bridge API, determine the operating state of an workplace and print it.
 
-![Image](../master/GetOperatingStateOfWorkplaceGif.gif)
+![Image](Assets/GetOperatingStateOfWorkplaceGif.gif)
 
 Folder: "GetOperatingStateOfWorkplace".
 
@@ -65,7 +66,7 @@ Folder: "GetOperatingStateOfWorkplace".
 
 A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all operating states and prints them out.
 
-![Image](../master/GetOperatingStatesGif.gif)
+![Image](Assets/GetOperatingStatesGif.gif)
 
 Folder: "GetOperatingStates".
 
@@ -85,7 +86,7 @@ _This procedure is not the "best" way to create a alarming/alerting functionalit
 _It is better to use the Bridge API callback functionality (PUSH not PULL)._
 _See the following callback examples_
 
-![Image](../master/AlertingOnWPLOperatingStateChangesBasedOnCyclicRequestsGif.gif)
+![Image](Assets/AlertingOnWPLOperatingStateChangesBasedOnCyclicRequestsGif.gif)
 
 Folder: "AlertingOnWPLOperatingStateChangesBasedOnCyclicRequests"
 
@@ -105,7 +106,7 @@ string PORT = "1883";
 string MQTTTopicName = "external/statechange"; // "external/" is mandatory
 
 ```
-![Image](../master/AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacksGif.gif)
+![Image](Assets/AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacksGif.gif)
 
 Folder: "AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacks"
 
@@ -113,6 +114,6 @@ Folder: "AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacks"
 
 A easy .NET Core Blazor Web App (ASP.NET) which includes some samples like "show all workplaces".
 
-![Image](../master/WebAppGif.gif)
+![Image](Assets/WebAppGif.gif)
 
 Folder: "WebApp"
