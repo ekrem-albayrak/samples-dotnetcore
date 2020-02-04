@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
 {
@@ -41,7 +40,7 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
         public string MachineId { get; set; }
 
         [JsonProperty("machineStateDetailIds")]
-        public string[] MachineStateDetailIds { get; set; }
+        public List<String> MachineStateDetailIds { get; set; }
 
         [JsonProperty("machineStateId")]
         public string MachineStateId { get; set; }

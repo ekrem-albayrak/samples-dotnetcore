@@ -14,7 +14,7 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
     class Program
     {
 
-        private const string _urlForTokenGeneration = "https://virtualfactory.force.eco:24443/ffwebservices/"; // URL to Bridge API
+        private const string _urlForTokenGeneration = "https://forcebridgehackathon.force.eco:24443/ffwebservices/"; // URL to Bridge API
         private const string _urlToBridgeAPI = _urlForTokenGeneration + "api/v2/";
         private const string _user = "GitHub"; // User
         private const string _password = "GitHub"; // Password of the user
@@ -89,17 +89,17 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
                     Console.WriteLine("MachineId: " + callbackResponse.Properties.ObjectId);
                     Console.WriteLine("Time stamp: " + callbackResponse.Properties.Timestamp);
                     //There was a state change, now check if the current state is the wished "alarming"-statem if yes print out a "WARNING"
-                    var workplace = connector.GetCurrentWorkplaceOperatingStateByWorkplaceNumber(_workplaceNumber);
-                    if (workplace.OperatingState.Code == _operating_state_code_for_alarming)
+                    var operatingState = connector.GetCurrentWorkplaceOperatingStateByWorkplaceNumber(_workplaceNumber);
+                    if (operatingState.Code == _operating_state_code_for_alarming)
                     {
                         Console.WriteLine("---------------------------------------");
                         Console.WriteLine("  !!! WARNING WARNING WARNING WARNING !!!");
                         Console.WriteLine(" --- MACHINE SWITCHED TO STATE CODE " + _operating_state_code_for_alarming + " ---");
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    Console.WriteLine(" !!! ERROR OCCURED !!! ");
+                    Console.WriteLine(" !!! ERROR OCCURED !!! " + ex.ToString());
                 }
                 Console.WriteLine("---------------------------------------");
                 Console.WriteLine("");

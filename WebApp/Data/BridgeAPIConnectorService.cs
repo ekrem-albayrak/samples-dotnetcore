@@ -1,7 +1,6 @@
 using logic;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace WebApp.Data
@@ -10,7 +9,7 @@ namespace WebApp.Data
     public class BridgeAPIConnectorService
     {
 
-        private const string _urlForTokenGeneration = "https://virtualfactory.force.eco:24443/ffwebservices/"; // URL to Bridge API
+        private const string _urlForTokenGeneration = "https://forcebridgehackathon.force.eco:24443/ffwebservices/"; // URL to Bridge API
         private const string _urlToBridgeAPI = _urlForTokenGeneration + "api/v2/";
         private const string _user = "GitHub"; // User
         private const string _password = "GitHub"; // Password of the user
@@ -44,10 +43,10 @@ namespace WebApp.Data
             FORCEBridgeConnector connector = new FORCEBridgeConnector(_urlToBridgeAPI, token);
             var operatingState = connector.GetCurrentWorkplaceOperatingStateByWorkplaceNumber(workplaceNumber);
 
-            return operatingState.OperatingState.Description + " (" + operatingState.OperatingState.Code + ")"; 
+            return operatingState.Description + " (" + operatingState.Code + ")";
         }
 
-        private List<Workplace> GetWorkplaces()
+        private List<Workplace> GetWorkplaces() 
         {
             Console.WriteLine("Welcome to the get all available workplaces sample!" + Environment.NewLine);
 

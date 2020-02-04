@@ -1,6 +1,6 @@
 # Sample Applications
 
-Provides sample applications for using the FORCAM FORCE Bridge API with .NET Core, ASP.Net Core & C#.
+Provides sample applications for using the FORCAM FORCE Bridge API with .NET Core, ASP.NET Core & C#.
 If you have any questions look at https://ask.forcebridge.io/
 
 Preview of one of the apps:
@@ -24,7 +24,7 @@ Please add your URL, user and password of your Bridge API instance to the variab
 
 ```csharp
 
-private const string _urlForTokenGeneration = ""; // YOUR URL (e.g. https://virtualfactory.force.eco:24443/ffwebservices/)
+private const string _urlForTokenGeneration = ""; // YOUR URL (e.g. https://forcebridgehackathon.force.eco:24443/ffwebservices/)
 private const string _user; // YOUR USER (e.g. GitHub)
 private const string _password; // YOUR PASSWORD (e.g. GitHub)
 
@@ -39,7 +39,7 @@ private const string _password; // YOUR PASSWORD (e.g. GitHub)
 
 # Authentication
 
-A small .net core console application wich authenticates to a FORCAM FORCE Bridge API and prints out the token information.
+A small .NET Core console application wich authenticates to a FORCAM FORCE Bridge API and prints out the token information.
 
 ![Image](Assets/AuthenticationImage.JPG)
 
@@ -47,7 +47,7 @@ Folder: "Authentication".
 
 # Get all available workplaces
 
-A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all available workplaces and prints them out.
+A small .NET Core console application wich authenticates to a FORCAM FORCE Bridge API, determine all available workplaces and prints them out.
 
 ![Image](Assets/GetAvailableWorkplacesGif.gif)
 
@@ -55,7 +55,7 @@ Folder: "GetAvailableWorkplaces".
 
 # Get current operating state of a workplace
 
-A small .net core cosnsole application wich authenticates to a FORCAM FORCE Bridge API, determine the operating state of an workplace and print it.
+A small .NET Core cosnsole application wich authenticates to a FORCAM FORCE Bridge API, determine the operating state of an workplace and print it.
 
 ![Image](Assets/GetOperatingStateOfWorkplaceGif.gif)
 
@@ -63,7 +63,7 @@ Folder: "GetOperatingStateOfWorkplace".
 
 # Get all operating states
 
-A small .net core console application wich authenticates to a FORCAM FORCE Bridge API, determine all operating states and prints them out.
+A small .NET Core console application wich authenticates to a FORCAM FORCE Bridge API, determine all operating states and prints them out.
 
 ![Image](Assets/GetOperatingStatesGif.gif)
 
@@ -71,7 +71,7 @@ Folder: "GetOperatingStates".
 
 # Alerting on workplace operating state change (based on cyclic api requests)
 
-A easy .net core console application which "alerts" if state of given workplace changed to undefined stoppage (Code 999).
+A easy .NET Core console application which "alerts" if state of given workplace changed to undefined stoppage (Code 999).
 
 Functionality:
 
@@ -91,7 +91,7 @@ Folder: "AlertingOnWPLOperatingStateChangesBasedOnCyclicRequests"
 
 # Alerting on workplace operating state change (based on mqtt callbacks)
 
-A .net core console application wich register and subscribe to machine state changes over our Callback-Functionality with an MQTT Broker and prints out a alarting message if a specific workplace operating state occures.
+A .NET Core console application wich register and subscribe to machine state changes over our Callback-Functionality with an MQTT Broker and prints out a alarting message if a specific workplace operating state occures.
 
 Attention: 
 
@@ -108,6 +108,15 @@ string MQTTTopicName = "external/statechange"; // "external/" is mandatory
 ![Image](Assets/AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacksGif.gif)
 
 Folder: "AlertingOnWPLOperatingStateChangesBasedOnMQTTCallbacks"
+
+# Staffmember Samples
+
+A .NET Core console application wich shows all staff members. On top the application determines the current assigned staffmember and logs him out & on.
+Attention: Requires COMMAND API access.
+
+![Image](Assets/StaffMemberSamples.gif)
+
+Folder: "StaffMemberSamples"
 
 # Web App Example
 

@@ -5,8 +5,8 @@ namespace getoperatingstateofworkplace
 {
     class Program
     {
-        
-        private const string _urlForTokenGeneration = "https://virtualfactory.force.eco:24443/ffwebservices/"; // URL to Bridge API
+
+        private const string _urlForTokenGeneration = "https://forcebridgehackathon.force.eco:24443/ffwebservices/"; // URL to Bridge API
         private const string _urlToBridgeAPI = _urlForTokenGeneration + "api/v2/";
         private const string _user = "GitHub"; // User
         private const string _password = "GitHub"; // Password of the user
@@ -27,7 +27,7 @@ namespace getoperatingstateofworkplace
             Console.WriteLine("Determine workplace " + workplaceNumber + "..." + Environment.NewLine);
 
             FORCEBridgeConnector connector = new FORCEBridgeConnector(_urlToBridgeAPI, token);
-            var workplace = connector.GetCurrentWorkplaceOperatingStateByWorkplaceNumber(workplaceNumber);
+            var workplace = connector.GetWorkplaceByNumber(workplaceNumber);
 
             Console.WriteLine(String.Format("Workplace: {0} ({1})", workplace.Number, workplace.Description));
             Console.WriteLine(String.Format("State: {2}: {1} (Id: {0})", workplace.OperatingState.Id, workplace.OperatingState.Description, workplace.OperatingState.Code));

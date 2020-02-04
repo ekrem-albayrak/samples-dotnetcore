@@ -54,7 +54,7 @@ namespace logic
             {
                 bearerResult = client.SendAsync(requestToken).Result;
             }
-                        
+
             var bearerData = bearerResult.Content.ReadAsStringAsync().Result;
             return JObject.Parse(bearerData).ToObject<Token>();
         }

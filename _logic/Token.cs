@@ -1,8 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace logic
 {
@@ -11,7 +8,7 @@ namespace logic
         [DataMember(Name = "access_token", EmitDefaultValue = false)]
         [JsonProperty(PropertyName = "access_token")]
         public string Access_token { get; set; }
-       
+
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
         [JsonProperty(PropertyName = "token_type")]
         public string Token_type { get; set; }
