@@ -30,25 +30,22 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
             Token token = tokenHandler.GetAccessToken();
             FORCEBridgeConnector connector = new FORCEBridgeConnector(_urlToBridgeAPI, token);
 
-            Console.WriteLine("Connect to the Bridge API and get machineID of defined workplace " + _workplaceNumber);
+            Console.WriteLine("Connect to the Bridge API and get workplace ID of defined workplace " + _workplaceNumber);
             Console.WriteLine("");
 
-            string machineID = connector.GetMachineOfWorkplaceByNumber(_workplaceNumber).Id;
-
-            Console.WriteLine("Machine id of workplace " + _workplaceNumber + " is " + machineID);
-            Console.WriteLine("");
+            string workplaceId = connector.GetWorkplaceByNumber(_workplaceNumber).Id;
 
             // Register Callback on Bridge API
 
             string MQTTTCPUrl = "mqtt://test.mosquitto.org"; //Define your MQTT-Broker and topic!!!!
             string PORT = "1883";
             string MQTTTopicName = "external/statechange";
-            string eventName = "MACHINE_STATE";
+            string eventName = "WORKPLACE_OPERATING_STATE_CHANGED";
 
-            Console.WriteLine("Register callback " + eventName + " of machine " + machineID + " for MQTT-Broker " + MQTTTCPUrl + ", topic " + MQTTTopicName);
+            Console.WriteLine("Register callback " + eventName + " of workplace " + workplaceId + " for MQTT-Broker " + MQTTTCPUrl + ", topic " + MQTTTopicName);
             Console.WriteLine("");
 
-            string callbackRegistrationJSON = BuildCallbackRegistrationJSON(MQTTTCPUrl + ":" + PORT + "/" + MQTTTopicName, machineID, eventName);
+            string callbackRegistrationJSON = BuildCallbackRegistrationJSON(MQTTTCPUrl + ":" + PORT + "/" + MQTTTopicName, workplaceId, eventName);
             connector.RegisterCallback(callbackRegistrationJSON);
 
             Console.WriteLine("Registration completed.");
@@ -81,16 +78,14 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
                 {
                     // WILL BE EXECUTED IF A MACHINE STATE OCCURES
                     var payload = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
-                    var callbackResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<MACHINESTATECallbackJSONRespone>(payload);
+                    var callbackResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<WorkplaceOperatingStateChangedCallbackResponse>(payload);
                     if (!callbackIDs.Contains(callbackResponse.Properties.CallbackId)) callbackIDs.Add(callbackResponse.Properties.CallbackId);
 
                     Console.WriteLine("--- RECEIVED " + eventName + " MESSAGE ---");
                     Console.WriteLine("---------------------------------------");
-                    Console.WriteLine("MachineId: " + callbackResponse.Properties.ObjectId);
-                    Console.WriteLine("Time stamp: " + callbackResponse.Properties.Timestamp);
-                    //There was a state change, now check if the current state is the wished "alarming"-statem if yes print out a "WARNING"
-                    var operatingState = connector.GetCurrentWorkplaceOperatingStateByWorkplaceNumber(_workplaceNumber);
-                    if (operatingState.Code == _operating_state_code_for_alarming)
+                    Console.WriteLine("Current operating state: " + callbackResponse.Properties.Data.CurrentOperatingState.Description + " (" + callbackResponse.Properties.Data.CurrentOperatingState.Code + ")" );
+                    Console.WriteLine("Previous operating state: " + callbackResponse.Properties.Data.PreviousOperatingState.Description + " (" + callbackResponse.Properties.Data.PreviousOperatingState.Code + ")");
+                    if (callbackResponse.Properties.Data.CurrentOperatingState.Code == _operating_state_code_for_alarming)
                     {
                         Console.WriteLine("---------------------------------------");
                         Console.WriteLine("  !!! WARNING WARNING WARNING WARNING !!!");
@@ -118,19 +113,19 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
         }
 
 
-        private static string BuildCallbackRegistrationJSON(string mqttURL, string machineID, string eventName)
+        private static string BuildCallbackRegistrationJSON(string mqttURL, string workplaceID, string eventName)
         {
             var builder = new StringBuilder();
             builder.AppendLine("{");
-            builder.AppendLine("  \"eventType\": \"COMMAND\",");
-            builder.AppendLine("  \"eventName\": \"" + eventName + "\",");
+            builder.AppendLine("  \"eventType\": \"" + eventName + "\",");
+            builder.AppendLine("  \"eventName\": \"" + "" + "\",");
             builder.AppendLine("  \"url\": \"" + mqttURL + "\",");
             builder.AppendLine("  \"maxRedeliveryAttempts\": 100,");
             builder.AppendLine("  \"maxUnconfirmedMessages\": 5000,");
             builder.AppendLine("  \"objectFilter\": [");
             builder.AppendLine("     {");
             builder.AppendLine("       \"name\": \"id\",");
-            builder.AppendLine("       \"value\": \"" + machineID + "\"");
+            builder.AppendLine("       \"value\": \"" + workplaceID + "\"");
             builder.AppendLine("     }");
             builder.AppendLine("  ]");
             builder.AppendLine("}");
