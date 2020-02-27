@@ -40,12 +40,12 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
             string MQTTTCPUrl = "mqtt://test.mosquitto.org"; //Define your MQTT-Broker and topic!!!!
             string PORT = "1883";
             string MQTTTopicName = "external/statechange";
-            string eventName = "WORKPLACE_OPERATING_STATE_CHANGED";
+            string EventType = "WORKPLACE_OPERATING_STATE_CHANGED";
 
-            Console.WriteLine("Register callback " + eventName + " of workplace " + workplaceId + " for MQTT-Broker " + MQTTTCPUrl + ", topic " + MQTTTopicName);
+            Console.WriteLine("Register callback " + EventType + " of workplace " + workplaceId + " for MQTT-Broker " + MQTTTCPUrl + ", topic " + MQTTTopicName);
             Console.WriteLine("");
 
-            string callbackRegistrationJSON = BuildCallbackRegistrationJSON(MQTTTCPUrl + ":" + PORT + "/" + MQTTTopicName, workplaceId, eventName);
+            string callbackRegistrationJSON = BuildCallbackRegistrationJSON(MQTTTCPUrl + ":" + PORT + "/" + MQTTTopicName, workplaceId, EventType);
             connector.RegisterCallback(callbackRegistrationJSON);
 
             Console.WriteLine("Registration completed.");
@@ -81,7 +81,7 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
                     var callbackResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<WorkplaceOperatingStateChangedCallbackResponse>(payload);
                     if (!callbackIDs.Contains(callbackResponse.Properties.CallbackId)) callbackIDs.Add(callbackResponse.Properties.CallbackId);
 
-                    Console.WriteLine("--- RECEIVED " + eventName + " MESSAGE ---");
+                    Console.WriteLine("--- RECEIVED " + EventType + " MESSAGE ---");
                     Console.WriteLine("---------------------------------------");
                     Console.WriteLine("Current operating state: " + callbackResponse.Properties.Data.CurrentOperatingState.Description + " (" + callbackResponse.Properties.Data.CurrentOperatingState.Code + ")" );
                     Console.WriteLine("Previous operating state: " + callbackResponse.Properties.Data.PreviousOperatingState.Description + " (" + callbackResponse.Properties.Data.PreviousOperatingState.Code + ")");
@@ -113,11 +113,11 @@ namespace AlertingOnWorkplaceOperatingStateChangeBasedOnMQTTCallbacks
         }
 
 
-        private static string BuildCallbackRegistrationJSON(string mqttURL, string workplaceID, string eventName)
+        private static string BuildCallbackRegistrationJSON(string mqttURL, string workplaceID, string eventType)
         {
             var builder = new StringBuilder();
             builder.AppendLine("{");
-            builder.AppendLine("  \"eventType\": \"" + eventName + "\",");
+            builder.AppendLine("  \"eventType\": \"" + eventType + "\",");
             builder.AppendLine("  \"eventName\": \"" + "" + "\",");
             builder.AppendLine("  \"url\": \"" + mqttURL + "\",");
             builder.AppendLine("  \"maxRedeliveryAttempts\": 100,");

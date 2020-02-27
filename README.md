@@ -125,3 +125,11 @@ A easy .NET Core Blazor Web App (ASP.NET) which includes some samples like "show
 ![Image](Assets/WebAppGif.gif)
 
 Folder: "WebApp"
+
+# FORCE Customized Action Callback Sample
+
+A easy .NET Core console application which "reacts" if in FORCAM FORCEa custom action named "test" occures.
+
+![Image](Assets/CustomizedActionCallbackGif.gif)
+
+Folder: "CustomizedActionCallback"
