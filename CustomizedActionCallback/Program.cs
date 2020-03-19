@@ -18,8 +18,6 @@ namespace CustomizedActionCallback
         private const string _urlToBridgeAPI = _urlForTokenGeneration + "api/v2/";
         private const string _user = "GitHub"; // User
         private const string _password = "GitHub"; // Password of the user
-        private const string _workplaceNumber = "R_WPL_04"; // YOUR WORKPLACE NUMBER
-        private const string _operating_state_code_for_alarming = "999"; // The operating state for alarming
 
         static async Task Main()
         {
