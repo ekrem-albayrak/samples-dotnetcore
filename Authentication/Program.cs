@@ -21,14 +21,13 @@ namespace authentication
             TokenHandler tokenHandler = new TokenHandler(_user, _password, _urlForTokenGeneration);
             Token token = tokenHandler.GetAccessToken();
 
-            Console.WriteLine("Result:");
+            Console.WriteLine("Result ClientCredentials:");
             Console.WriteLine("-----------------");
             Console.WriteLine("Token: " + token.Access_token);
             Console.WriteLine("Refresh-Token: " + token.Refresh_token);
             Console.WriteLine("Token type: " + token.Token_type);
             Console.WriteLine("Expires in: " + token.Expires_in);
             Console.WriteLine("Scope: " + token.Scope);
-
 
         }
     }

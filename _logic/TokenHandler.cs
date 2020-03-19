@@ -28,8 +28,7 @@ namespace logic
             _password = password;
             _baseURLForTokenGeneration = urlForTokenGeneration;
         }
-
-
+                
         /// <summary>
         /// Get access token
         /// </summary>
