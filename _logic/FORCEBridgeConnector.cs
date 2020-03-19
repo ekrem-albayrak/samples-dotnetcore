@@ -93,6 +93,33 @@ namespace logic
             return response.Data.Embedded.OperatingStates.Select(x => x.Properties).ToList();
         }
 
+        public List<TicketProperties> GetTickets()
+        {
+            var httpClient = new RestClient(_baseURL);
+            RestRequest request = new RestRequest("tickets", Method.GET, DataFormat.Json);
+            SetTokenHeader(request);
+            var response = httpClient.Execute<TicketCollection>(request, Method.GET);
+            return response.Data.Embedded.Tickets.Select(x => x.Properties).ToList();
+        }
+
+        public List<TicketActivityProperties> GetTicketActivitiesByTicketId(string ticketId)
+        {
+            var httpClient = new RestClient(_baseURL);
+            RestRequest request = new RestRequest("tickets/"+ ticketId +"/activities", Method.GET, DataFormat.Json);
+            SetTokenHeader(request);
+            var response = httpClient.Execute<TicketActivityCollection>(request, Method.GET);
+            return response.Data.Embedded.Activities.Select(x => x.Properties).ToList();
+        }
+
+        public List<TicketActivityRemarkProperties> GetTicketActivityRemarksByTicketAndActivityId(string ticketId, string activityId)
+        {
+            var httpClient = new RestClient(_baseURL);
+            RestRequest request = new RestRequest("tickets/" + ticketId + "/activities/" + activityId + "/remarks", Method.GET, DataFormat.Json);
+            SetTokenHeader(request);
+            var response = httpClient.Execute<TicketActivityRemarkCollection>(request, Method.GET);
+            return response.Data.Embedded.Remarks.Select(x => x.Properties).ToList();
+        }
+
         public void DeleteCallback(string id)
         {
             var httpClient = new RestClient(_baseURL);

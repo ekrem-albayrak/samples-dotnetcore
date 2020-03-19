@@ -128,8 +128,14 @@ Folder: "WebApp"
 
 # FORCE Customized Action Callback Sample
 
-A easy .NET Core console application which "reacts" if in FORCAM FORCEa custom action named "test" occures.
+A easy .NET Core console application which "reacts" if in FORCAM FORCE custom action named "test" occures.
 
 ![Image](Assets/CustomizedActionCallbackGif.gif)
 
 Folder: "CustomizedActionCallback"
+
+# Work with our Ticket API
+
+A easy .NET Core console application which use the FORCAM FORCE Ticket API.
+
+Folder: "TicketSamples"
