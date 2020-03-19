@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffMemberSamples", "Staff
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomizedActionCallback", "CustomizedActionCallback\CustomizedActionCallback.csproj", "{41D7AEDD-5268-4F2B-9D36-A38BFCE17C18}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketSamples", "TicketSamples\TicketSamples.csproj", "{BAE3CB31-C0B8-4771-88E2-02FC48542676}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{41D7AEDD-5268-4F2B-9D36-A38BFCE17C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41D7AEDD-5268-4F2B-9D36-A38BFCE17C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41D7AEDD-5268-4F2B-9D36-A38BFCE17C18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE3CB31-C0B8-4771-88E2-02FC48542676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE3CB31-C0B8-4771-88E2-02FC48542676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE3CB31-C0B8-4771-88E2-02FC48542676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE3CB31-C0B8-4771-88E2-02FC48542676}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

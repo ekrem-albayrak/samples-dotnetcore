@@ -3,6 +3,8 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web;
+using RestSharp;
+using FORCAM.BridgeAPI.Model;
 
 namespace logic
 {
@@ -27,42 +29,17 @@ namespace logic
             _baseURLForTokenGeneration = urlForTokenGeneration;
         }
 
+
         /// <summary>
-        /// This method uses the OAuth Client Credentials Flow to get an Access Token to provide
-        /// Authorization to the APIs.
+        /// Get access token
         /// </summary>
         /// <returns></returns>
         public Token GetAccessToken()
         {
-            var baseUri = new Uri(_baseURLForTokenGeneration);
-            var encodedConsumerKey = HttpUtility.UrlEncode(_user);
-            var encodedConsumerKeySecret = HttpUtility.UrlEncode(_password);
-            var encodedPair = Base64Encode(String.Format("{0}:{1}", encodedConsumerKey, encodedConsumerKeySecret));
-
-            var requestToken = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri(baseUri, "oauth/token"),
-                Content = new StringContent("grant_type=client_credentials")
-            };
-
-            requestToken.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded") { CharSet = "UTF-8" };
-            requestToken.Headers.TryAddWithoutValidation("Authorization", String.Format("Basic {0}", encodedPair));
-
-            HttpResponseMessage bearerResult;
-            using (var client = new HttpClient())
-            {
-                bearerResult = client.SendAsync(requestToken).Result;
-            }
-
-            var bearerData = bearerResult.Content.ReadAsStringAsync().Result;
-            return JObject.Parse(bearerData).ToObject<Token>();
-        }
-
-        private string Base64Encode(string plainText)
-        {
-            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
-            return System.Convert.ToBase64String(plainTextBytes);
+            var httpClient = new RestClient(_baseURLForTokenGeneration);
+            RestRequest request = new RestRequest("oauth2.0/accessToken?client_id=" + _user + "&client_secret=" + _password + "&grant_type=client_credentials&scope=read%20write", Method.GET, DataFormat.Json);
+            var response = httpClient.Execute<Token>(request, Method.GET);
+            return response.Data;
         }
 
     }

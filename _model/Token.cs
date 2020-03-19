@@ -1,13 +1,23 @@
 ﻿using Newtonsoft.Json;
 using System.Runtime.Serialization;
 
-namespace logic
+
+namespace FORCAM.BridgeAPI.Model
 {
-    public class Token
+
+        /// <summary>
+        /// Token
+        /// </summary>
+        [DataContract]
+        public class Token
     {
         [DataMember(Name = "access_token", EmitDefaultValue = false)]
         [JsonProperty(PropertyName = "access_token")]
         public string Access_token { get; set; }
+
+        [DataMember(Name = "refresh_token", EmitDefaultValue = false)]
+        [JsonProperty(PropertyName = "refresh_token")]
+        public string Refresh_token { get; set; }
 
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
         [JsonProperty(PropertyName = "token_type")]

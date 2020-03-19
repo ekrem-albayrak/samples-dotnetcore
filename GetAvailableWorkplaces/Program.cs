@@ -1,4 +1,5 @@
-﻿using logic;
+﻿using FORCAM.BridgeAPI.Model;
+using logic;
 using System;
 
 namespace getavailableworkplaces
@@ -6,8 +7,8 @@ namespace getavailableworkplaces
     class Program
     {
 
-        private const string _urlForTokenGeneration = "https://forcebridgehackathon.force.eco:24443/ffwebservices/"; // URL to Bridge API
-        private const string _urlToBridgeAPI = _urlForTokenGeneration + "api/v2/";
+        private const string _urlForTokenGeneration = "https://forcebridgehackathon.force.eco:25443/ffauth/";
+        private const string _urlToBridgeAPI = "https://forcebridgehackathon.force.eco:24443/ffwebservices/api/v2/";
         private const string _user = "GitHub"; // User
         private const string _password = "GitHub"; // Password of the user
 
