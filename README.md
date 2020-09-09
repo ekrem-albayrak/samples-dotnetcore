@@ -69,26 +69,6 @@ A small .NET Core console application wich authenticates to a FORCAM FORCE Bridg
 
 Folder: "GetOperatingStates".
 
-# Alerting on workplace operating state change (based on cyclic api requests)
-
-A easy .NET Core console application which "alerts" if state of given workplace changed to undefined stoppage (Code 999).
-
-Functionality:
-
-1.) Reads first console argument (Cycle-Time) / Default 60 seconds
-2.) LOOP (Cycle Time)
-2.1) Detect current operating state of the workplace
-2.2) If OperatingState is "999" (Undefined Stoppage)
-2.2.1) Create a console message
-
-_This procedure is not the "best" way to create a alarming/alerting functionality._
-_It is better to use the Bridge API callback functionality (PUSH not PULL)._
-_See the following callback examples_
-
-![Image](Assets/AlertingOnWPLOperatingStateChangesBasedOnCyclicRequestsGif.gif)
-
-Folder: "AlertingOnWPLOperatingStateChangesBasedOnCyclicRequests"
-
 # Alerting on workplace operating state change (based on mqtt callbacks)
 
 A .NET Core console application wich register and subscribe to machine state changes over our Callback-Functionality with an MQTT Broker and prints out a alarting message if a specific workplace operating state occures.
